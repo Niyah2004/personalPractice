@@ -1,0 +1,11 @@
+[
+    {
+        "Task": "Create a python function to validate an aws access key ID format, ensuring it starts with 'AKIA'"
+    },
+    {
+        "Task": "Write a JSON schema to validate the structure of an aws lambda function configured with a specific runtime."
+    },
+    {
+        "Task": "Develop a regex pattern to extract the aws region from an arn."
+    }
+]
