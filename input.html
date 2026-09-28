@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Names</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Display</a>
+      <a href="input.html" class="active">Add Names</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h1>Add a name</h1>
+      <p class="subtitle">Set a title and add names one at a time. They'll show up on the display page instantly.</p>
+
+      <form id="entry-form" novalidate>
+        <div class="field">
+          <label for="title-input">Title</label>
+          <input type="text" id="title-input" name="title" placeholder="e.g. Team Roster" />
+        </div>
+
+        <div class="field">
+          <label for="name-input">Name</label>
+          <input type="text" id="name-input" name="name" placeholder="e.g. Janiyah" autocomplete="off" />
+        </div>
+
+        <button type="submit" class="btn">Add Name</button>
+        <p class="status" id="status"></p>
+      </form>
+
+      <div class="preview">
+        <h2>Names added so far</h2>
+        <ul class="name-list" id="preview-list"></ul>
+        <p class="empty" id="preview-empty">No names added yet.</p>
+      </div>
+
+      <p class="footer-link">Go to the <a href="index.html">display page</a> to see them.</p>
+    </div>
+  </main>
+
+  <footer>Names Site &middot; stored in this browser</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
