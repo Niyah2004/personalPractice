@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": ["Bash(python3 -m unittest:*)", "mcp__arn-tools__lookup_arn", "mcp__arn-tools__check_access_key_id"],
+    "deny": ["Read(./.env)", "Read(./.env.*)"]
+  },
+  "enableAllProjectMcpServers": true,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Read|Edit|Write",
+        "hooks": [
+          { "type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/pre_tool_guard.py" }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          { "type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/post_tool_check.py" }
+        ]
+      }
+    ]
+  }
+}
